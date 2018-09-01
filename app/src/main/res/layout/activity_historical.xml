@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    android:orientation="vertical"
+    android:backgroundTint="#99d5cf">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_gravity="bottom"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/menu_navigation">
+
+        </android.support.design.widget.BottomNavigationView>
+
+        <TextView
+            android:id="@+id/txtLoginTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="49dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:text="Histórico"
+            android:textSize="35dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgErrorCloud"
+            android:layout_width="58dp"
+            android:layout_height="57dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/lstVProductsH"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/error_cloud" />
+
+        <ListView
+            android:id="@+id/lstVProductsH"
+            android:layout_width="387dp"
+            android:layout_height="378dp"
+            android:layout_marginTop="8dp"
+            android:paddingTop="10dp"
+            android:theme="?attr/actionBarPopupTheme"
+            app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.333"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtLoginTitle"
+            app:layout_constraintVertical_bias="0.0">
+
+        </ListView>
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>
